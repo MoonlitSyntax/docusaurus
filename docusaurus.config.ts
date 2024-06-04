@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
+  title: 'MoonlitSyntax',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -25,10 +25,12 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
-
+  plugins: [
+    'docusaurus-plugin-sass'
+  ],
   presets: [
     [
       'classic',
@@ -130,9 +132,14 @@ const config: Config = {
     algolia: {
       appId: '0C8BFG6X3J',
       apiKey: '423fc3fc00280fd3e991cff430ea2f59',
-      indexName: 'echo-siren'
+      indexName: 'echo-siren',
+      contextualSearch: false,
+      searchParameters: {
+        facetFilters: [],
+      },
     },
-
+    
+    
   } satisfies Preset.ThemeConfig,
 };
 
