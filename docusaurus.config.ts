@@ -129,7 +129,7 @@ const config: Config = {
     },
     algolia: {
       appId: '0C8BFG6X3J',
-      apiKey: 'e622070db1512e739056f5be62f3329a',
+      apiKey: '423fc3fc00280fd3e991cff430ea2f59',
       indexName: 'echo-siren'
     },
 
